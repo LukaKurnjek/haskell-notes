@@ -7,12 +7,13 @@ new concept of programming to experienced imperative programmers (C++, Java, Pyt
 
 It generally spents less time when explain programming basics as e.g. recursion,
 explaining Haskell concepts as purity or Haskell fetaures as input-output computation. 
+
 Never the less it does not leave out importan concepts and it showcases it with
 extended examples. 
 
 The lessons follow the same outline as the official IOGs haskell course I was 
 working on. The homework of this course is more or less the same as the one in 
-IOGs official Haskell course. 
+IOGs official course. 
 
 ## How to run the code
 The jupyter notebook lessons can be found in the *lessons* folder. You will be
