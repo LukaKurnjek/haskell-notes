@@ -3,17 +3,18 @@ A simplified version of [IOGs Haskell course](https://github.com/input-output-hk
 for more or less experienced imperative programmers.
 
 This version of the Haskell course tries to find the right balance in explaining a
-new concept of programming to experienced imperative programmers (C++, Java, Python).
+new programming concept of purely functional programming, to programmers which know
+how to write imperative code (C++, Java, Python, ...).
 
-It generally spents less time when explain programming basics as e.g. recursion,
-explaining Haskell concepts as purity or Haskell fetaures as input-output computation. 
+It generally spents less time as IOGs haskell course when explain programming basics 
+as e.g. recursion, Haskell concepts as purity or Haskell fetaures as input-output computation. 
 
-Never the less it does not leave out importan concepts and it showcases it with
+Never the less it does not leave out important concepts and it showcases it with
 extended examples. 
 
 The lessons follow the same outline as the official IOGs haskell course I was 
 working on. The homework of this course is more or less the same as the one in 
-IOGs official course. 
+IOGs course. 
 
 ## How to run the code
 The jupyter notebook lessons can be found in the *lessons* folder. You will be
