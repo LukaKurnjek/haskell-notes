@@ -2,9 +2,9 @@
 A simplified version of [IOGs Haskell course](https://github.com/input-output-hk/haskell-course) 
 for more or less experienced imperative programmers.
 
-This version of the Haskell course tries to find the right balance in explaining a
-new programming concept of purely functional programming, to programmers which know
-how to write imperative code (C++, Java, Python, ...).
+This Haskell course tries to find the right balance in explaining a new programming 
+concept of purely functional programming, to programmers which know how to write 
+imperative code (C++, Java, Python, ...).
 
 It generally spents less time as IOGs haskell course when explain programming basics 
 as e.g. recursion, Haskell concepts as purity or Haskell fetaures as input-output computation. 
