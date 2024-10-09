@@ -1,4 +1,4 @@
-# haskell-course
+# haskell-notes
 Non-published material from [IOGs Haskell course](https://github.com/input-output-hk/haskell-course). 
 
 ## How to run the code
