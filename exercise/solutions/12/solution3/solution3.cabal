@@ -1,0 +1,26 @@
+cabal-version:      2.4
+name:               solution3
+version:            0.1.0.0
+synopsis:
+homepage:
+license:            NONE
+author:             Luka Kurnjek
+maintainer:         luka.kurnjek@iohk.io
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  Libraries
+    build-depends:    
+        base ^>=4.14.3.0,
+        scientific
+    hs-source-dirs:   lib
+    default-language: Haskell2010
+
+executable solution3
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.14.3.0,
+        scientific,
+        solution3
+    hs-source-dirs:   app
+    default-language: Haskell2010
