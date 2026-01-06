@@ -1,4 +1,0 @@
-
-Name:     John Doe
-Email:    John.Doe@iohk.io
-Password: Abc123
