@@ -109,7 +109,8 @@ factorial n = accumulate 2 "1" ++ " = " ++ show result
 -- Question 8
 -- Below you have defined some beer prices in bevogBeerPrices and your order list in
 -- orderList + the deliveryCost. Write a function that takes in an order and calculates
--- the cost including delivery. Assume that the two lists have the beers in the same order.
+-- the cost including delivery. Take in account that the two lists might not have the
+-- beers in the same order. 
 
 bevogBeerPrices :: [(String, Double)]
 bevogBeerPrices =
