@@ -1,3 +1,6 @@
+
+import Data.List
+
 -- Question 1
 -- Write a function called `repeat'` that takes a value and creates an infinite list with
 -- the value provided as every element of the list.
@@ -110,25 +113,28 @@ factorial n = accumulate 2 "1" ++ " = " ++ show result
 
 bevogBeerPrices :: [(String, Double)]
 bevogBeerPrices =
-  [ ("Tak", 6.00),
-    ("Kramah", 7.00),
+  [ ("Baja", 7.50),
     ("Ond", 8.50),
-    ("Baja", 7.50)
+    ("Tak", 6.00),
+    ("Kramah", 7.00)
   ]
 
 orderList :: [(String, Double)]
 orderList =
   [ ("Tak", 5),
     ("Kramah", 4),
-    ("Ond", 7)
+    ("Baja", 7)
   ]
 
 deliveryCost :: Double
 deliveryCost = 8.50
 
 beerCosts :: [(String, Double)] -> Double
-beerCosts =
+beerCosts orderList =
   foldr (+) deliveryCost
-    . zipWith (*) (map snd bevogBeerPrices)
+    . zipWith (*) (map snd orderListSorted)
     . map snd
-    . filter (\name -> fst name `elem` map fst bevogBeerPrices)
+    . filter (\name -> fst name `elem` map fst orderListSorted) $ 
+    bevogBeerPricesSorted
+  where orderListSorted = sortBy compare orderList
+        bevogBeerPricesSorted = sortBy compare bevogBeerPrices
