@@ -37,4 +37,7 @@ cars :: [(String,Int)]
 cars = [("Toyota",0), ("Nissan",3), ("Ford",1)]
 
 anyXCarsLeft :: String -> Bool
-anyXCarsLeft x = any (\(_, cars) -> cars > 0) . filter (\(brand, _) -> brand == x) $ cars
+anyXCarsLeft x = (\(_, cars) -> cars > 0)
+                 . (!! 0)
+                 . filter (\(brand, _) -> brand == x) $ 
+                 cars
