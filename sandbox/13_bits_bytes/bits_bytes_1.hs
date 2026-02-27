@@ -26,3 +26,9 @@ main = do
     (time . BC.putStrLn . Prelude.last . BC.lines) fileContent
     fileContent <- TIO.readFile "./bible.txt"
     (time . TIO.putStrLn . Prelude.last . T.lines) fileContent
+
+{-
+Computation time: 0.1574 sec
+Computation time: 0.0012 sec
+Computation time: 0.0065 sec
+-}
