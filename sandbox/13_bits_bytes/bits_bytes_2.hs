@@ -28,11 +28,10 @@ bytesChar2Bytes = BS.unpack $ BC.pack bytesChar
 
 {-- Up to byte [127] charters get the same encoding for both formats. 
     From [128] to [255] the econding differs and is correct for Char 
-    but the last print does not display the charater. For charaters 
-    that are above the 255 unicode character list 
+    but the last print line in main does not display the charater. 
+    For charaters that are above the 255 unicode character list 
     (https://en.wikipedia.org/wiki/List_of_Unicode_characters) as 
-    example €, Char encoding does not encode correctly (the process
-    is not reversable). --}
+    example €, Char encoding does not encode correctly. --}
 
 aChar :: BS.ByteString
 aChar = BC.pack "€" 
