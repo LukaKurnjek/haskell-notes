@@ -49,6 +49,7 @@ main = do
   TIO.putStrLn bytesText -- prints ǿ
   putStrLn bytesChar -- prints Ç¿
   print bytesChar2Bytes -- prints [199,191]
+  print byteString -- prints "\199\191"
   print aCharWord8 -- prints [172]
   print aTextWord8 -- prints [226,130,172]
   putStrLn $ BC.unpack $ BS.pack aCharWord8 -- "¬"
