@@ -27,11 +27,10 @@ bytesChar2Bytes :: [Word8]
 bytesChar2Bytes = BS.unpack $ BC.pack bytesChar
 
 {-- Up to byte [127] charters get the same encoding for both formats. 
-    From [128] to [255] the econding differs and is correct for Char 
-    but the last print line in main does not display the charater. 
-    For charaters that are above the 255 unicode character list 
-    (https://en.wikipedia.org/wiki/List_of_Unicode_characters) as 
-    example €, Char encoding does not encode correctly. --}
+    From [128] to [255] the econding differs. For charaters that are 
+    above the 255 unicode character list as example €, Char encoding 
+    does not encode correctly - the last putStrLn line gives a different 
+    character (https://en.wikipedia.org/wiki/List_of_Unicode_characters) --}
 
 aChar :: BS.ByteString
 aChar = BC.pack "€" 
@@ -50,6 +49,6 @@ main = do
   TIO.putStrLn bytesText -- prints ǿ
   putStrLn bytesChar -- prints Ç¿
   print bytesChar2Bytes -- prints [199,191]
-  print aCharWord8 -- prints [127]
+  print aCharWord8 -- prints [172]
   print aTextWord8 -- prints [226,130,172]
-  print $ BC.unpack $ BS.pack aCharWord8 -- [\172]
+  putStrLn $ BC.unpack $ BS.pack aCharWord8 -- "¬"
