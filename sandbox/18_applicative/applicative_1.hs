@@ -27,7 +27,11 @@ list2 = [4,5] :: [Int]
 allCombinations :: Num a => [a] -> [a] -> [a]
 allCombinations l1 l2 = pure (+) <*> l1 <*> l2
 
+allCombinations' :: Num a => [a] -> [a] -> [a]
+allCombinations' l1 l2 = map (+) l1 <*> l2
+
 main :: IO ()
 main = do
-  print $ add1 var2
-  print $ allCombinations list1 list2
+  print $ add1 var2 -- Just 3
+  print $ allCombinations list1 list2 -- [5,6,6,7,7,8]
+  print $ allCombinations' list1 list2 -- [5,6,6,7,7,8]
